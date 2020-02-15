@@ -41,13 +41,11 @@ export default class Navi extends Component {
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
-                  Cart - {this.props.cart.length}
+                  Cart
                 </DropdownToggle>
                 <DropdownMenu right>
-                    {this.props.cart.map(cartItem=>(
-                        <DropdownItem key={cartItem.product.id}>{cartItem.product.quantity}-{cartItem.product.productName}</DropdownItem>
-                    ))}
-                  
+                  <DropdownItem>Option 1</DropdownItem>
+                  <DropdownItem>Option 2</DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>Reset</DropdownItem>
                 </DropdownMenu>

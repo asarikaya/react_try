@@ -45,7 +45,7 @@ export default class Navi extends Component {
                 </DropdownToggle>
                 <DropdownMenu right>
                     {this.props.cart.map(cartItem=>(
-                        <DropdownItem key={cartItem.product.id}>{cartItem.product.quantity}-{cartItem.product.productName}</DropdownItem>
+                        <DropdownItem key={cartItem.product.id}>{cartItem.product.productName}</DropdownItem>
                     ))}
                   
                   <DropdownItem divider />
