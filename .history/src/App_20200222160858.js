@@ -65,33 +65,17 @@ export default class App extends Component {
             <Col xs="9">
               <BrowserRouter>
                 <Switch>
-                  <Route
-                    exact
-                    path="/"
-                    render={props => (
-                      <ProductList
-                        {...props}
-                        products={this.state.products}
-                        addToCart={this.addToCart}
-                        currentCategory={this.state.currentCategory}
-                        info={productInfo}
-                      />
-                    )}
-                  />
-                  <Route
-                    exact
-                    path="/cart"
-                    render={props => (
-                      <CartList
-                        {...props}
-                        cart={this.state.cart}
-                        removeToCart={this.removeFromCart}
-                      />
-                    )}
-                  />
-                  <Route component={NotFound} />
+                  <Route exact path="/" component={NotFound} />
+                  <Route exact path="/cart" component={CartList} />
                 </Switch>
               </BrowserRouter>
+
+              <ProductList
+                addToCart={this.addToCart}
+                currentCategory={this.state.currentCategory}
+                info={productInfo}
+                products={this.state.products}
+              />
             </Col>
           </Row>
         </Container>
