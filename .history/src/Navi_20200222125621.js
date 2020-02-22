@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import CartSummary from "./CartSummary";
 import {
   Collapse,
   Navbar,
@@ -10,7 +9,7 @@ import {
   NavLink,
   NavbarText
 } from "reactstrap";
-
+import CartSummary from "./CartSummary";
 export default class Navi extends Component {
   toogle = this.toogle.bind(this);
   state = {
@@ -37,7 +36,7 @@ export default class Navi extends Component {
                   GitHub
                 </NavLink>
               </NavItem>
-              <CartSummary removeFromCart={this.props.removeFromCart} cart={this.props.cart}/>
+              <CartSummary/>
             </Nav>
             <NavbarText>Simple Text</NavbarText>
           </Collapse>
