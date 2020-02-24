@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import CartSummary from "./CartSummary";
-
+import { Link } from "react-router-dom";
 import {
   Collapse,
   Navbar,
@@ -26,7 +25,6 @@ export default class Navi extends Component {
 
   render() {
     return (
-      <div>
         <Navbar color="light" light expand="md">
           <NavbarBrand><Link to="/">KaraApp</Link></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
@@ -42,10 +40,9 @@ export default class Navi extends Component {
               </NavItem>
               <CartSummary removeFromCart={this.props.removeFromCart} cart={this.props.cart}/>
             </Nav>
-            <NavbarText>Simple</NavbarText>
+            <NavbarText><Link to="/cart">Go to cart</Link></NavbarText>
           </Collapse>
         </Navbar>
-      </div>
     );
   }
 }

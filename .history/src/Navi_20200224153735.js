@@ -42,7 +42,7 @@ export default class Navi extends Component {
               </NavItem>
               <CartSummary removeFromCart={this.props.removeFromCart} cart={this.props.cart}/>
             </Nav>
-            <NavbarText>Simple</NavbarText>
+            <NavbarText><Link to="cart">Go to cart</Link></NavbarText>
           </Collapse>
         </Navbar>
       </div>

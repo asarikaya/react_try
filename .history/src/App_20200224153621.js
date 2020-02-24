@@ -45,7 +45,6 @@ export default class App extends Component {
   removeFromCart = product => {
     let newCart = this.state.cart.filter(c => c.product.id !== product.id);
     this.setState({ cart: newCart });
-    alertify.error(product.productName + " removed to cart!", 2);
   };
 
   render() {
@@ -84,7 +83,7 @@ export default class App extends Component {
                       <CartList
                         {...props}
                         cart={this.state.cart}
-                        removeFromCart={this.removeFromCart}
+                        removeToCart={this.removeFromCart}
                       />
                     )}
                   />

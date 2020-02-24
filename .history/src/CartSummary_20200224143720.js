@@ -14,6 +14,7 @@ export default class CartSummary extends Component {
   renderSummary() {
     return (
       <UncontrolledDropdown nav inNavbar>
+        <Link to="/cart">Cart</Link>
         <DropdownToggle nav caret>
           Cart - {this.props.cart.length}
         </DropdownToggle>

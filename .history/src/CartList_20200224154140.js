@@ -26,12 +26,7 @@ export default class CartList extends Component {
               <td>{cartItem.product.unitsInStock}</td>
               <td>{cartItem.quantity}</td>
               <td>
-                <Button
-                  color="danger"
-                  onClick={() => this.props.removeFromCart(cartItem.product)}
-                >
-                  Remove
-                </Button>
+                  <Button>Remove From Cart</Button>
               </td>
             </tr>
           ))}
@@ -40,6 +35,10 @@ export default class CartList extends Component {
     );
   }
   render() {
-    return <div>{this.renderCart()}</div>;
+    return (
+      <div>
+        {this.renderCart()}
+      </div>
+    );
   }
 }

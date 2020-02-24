@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Table, Button } from "reactstrap";
+import { Table } from "reactstrap";
+import { Link } from "react-router-dom";
 
 export default class CartList extends Component {
   renderCart() {
@@ -13,7 +14,6 @@ export default class CartList extends Component {
             <th>Unit Price</th>
             <th>Units In Stock</th>
             <th>Quantity</th>
-            <th>*</th>
           </tr>
         </thead>
         <tbody>
@@ -25,14 +25,6 @@ export default class CartList extends Component {
               <td>{cartItem.product.unitPrice}</td>
               <td>{cartItem.product.unitsInStock}</td>
               <td>{cartItem.quantity}</td>
-              <td>
-                <Button
-                  color="danger"
-                  onClick={() => this.props.removeFromCart(cartItem.product)}
-                >
-                  Remove
-                </Button>
-              </td>
             </tr>
           ))}
         </tbody>
@@ -40,6 +32,11 @@ export default class CartList extends Component {
     );
   }
   render() {
-    return <div>{this.renderCart()}</div>;
+    return (
+      <div>
+        <Link to="/">Anasayfa</Link>
+        {this.renderCart()}
+      </div>
+    );
   }
 }
