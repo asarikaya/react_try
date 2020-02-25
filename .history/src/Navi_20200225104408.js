@@ -13,6 +13,7 @@ import {
   NavbarText
 } from "reactstrap";
 
+
 export default class Navi extends Component {
   toogle = this.toogle.bind(this);
   state = {
@@ -27,31 +28,22 @@ export default class Navi extends Component {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand>
-            <Link to="/">KaraApp</Link>
-          </NavbarBrand>
+          <NavbarBrand><Link to="/">KaraApp</Link></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="mr-auto" navbar>
               <NavItem>
-                <NavLink>
-                  <Link to="/form1">Form1</Link>
-                </NavLink>
+                <NavLink><Link to="/form1">Form1</Link></NavLink>
               </NavItem>
               <NavItem>
-                <NavLink>
-                  <Link to="/form2">Form2</Link>
-                </NavLink>
+                <NavLink><Link to="/form2">Form2</Link></NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="https://github.com/reactstrap/reactstrap">
                   GitHub
                 </NavLink>
               </NavItem>
-              <CartSummary
-                removeFromCart={this.props.removeFromCart}
-                cart={this.props.cart}
-              />
+              <CartSummary removeFromCart={this.props.removeFromCart} cart={this.props.cart}/>
             </Nav>
             <NavbarText>Simple</NavbarText>
           </Collapse>

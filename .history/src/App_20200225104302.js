@@ -66,34 +66,34 @@ export default class App extends Component {
               />
             </Col>
             <Col xs="9">
-              <Switch>
-                <Route
-                  exact
-                  path="/"
-                  render={props => (
-                    <ProductList
-                      {...props}
-                      products={this.state.products}
-                      addToCart={this.addToCart}
-                      currentCategory={this.state.currentCategory}
-                      info={productInfo}
-                    />
-                  )}
-                />
-                <Route
-                  path="/cart"
-                  render={props => (
-                    <CartList
-                      {...props}
-                      cart={this.state.cart}
-                      removeFromCart={this.removeFromCart}
-                    />
-                  )}
-                />
-                <Route path="/form1" component={FormDemo1}></Route>
-                <Route path="/form2" component={FormDemo2}></Route>
-                <Route component={NotFound} />
-              </Switch>
+                <Switch>
+                  <Route
+                    exact
+                    path="/"
+                    render={props => (
+                      <ProductList
+                        {...props}
+                        products={this.state.products}
+                        addToCart={this.addToCart}
+                        currentCategory={this.state.currentCategory}
+                        info={productInfo}
+                      />
+                    )}
+                  />
+                  <Route
+                    path="/cart"
+                    render={props => (
+                      <CartList
+                        {...props}
+                        cart={this.state.cart}
+                        removeFromCart={this.removeFromCart}
+                      />
+                    )}
+                  />
+                  <Route path="/form1" component={FormDemo1}></Route>
+                  <Route path="/form2" component={FormDemo2}></Route>
+                  <Route component={NotFound} />
+                </Switch>
             </Col>
           </Row>
         </Container>
