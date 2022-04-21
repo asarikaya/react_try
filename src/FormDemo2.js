@@ -12,7 +12,7 @@ export default class FormDemo2 extends Component {
   };
   handleSubmit = event => {
     event.preventDefault();
-    alertify.success(this.state.email + " added to db!", 2);
+    alertify.success(this.state.email + " ad4444ded to db!", 2);
   };
   render() {
     return (
